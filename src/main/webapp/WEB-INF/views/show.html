@@ -34,7 +34,7 @@
             <td><img th:src="${c.img_product}" width="200" height="150"></td>
             <td th:text="${c.description}"></td>
             <td th:text="${c.price}"></td>
-           <td><a th:href= "@{/edit/{id}(id=${c.id_product})}" class="btn btn-warning">Edit</a></td>
+           <td><a th:href= "@{/edit{id}(id=${c.id_product})}" class="btn btn-warning">Edit</a></td>
            <td><a th:href="@{/delete(id=${c.id_product})}" class="btn btn-danger">Delete</a></td>
         </tr>
         </tbody>

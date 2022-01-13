@@ -40,13 +40,13 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView("redirect:/show");
         return modelAndView;
     }
-    @GetMapping("/edit/{id}")
+    @GetMapping("/edit{id}")
     public ModelAndView showedit(@PathVariable int id){
         ModelAndView modelAndView = new ModelAndView("/edit");
         modelAndView.addObject("products",ProductService.getProduct(id));
         return modelAndView;
     }
-    @PostMapping("/edit/{id}")
+    @PostMapping("/edit{id}")
     public ModelAndView edit(@ModelAttribute Product product, @PathVariable int id,@RequestParam MultipartFile upImg){
         ModelAndView modelAndView = new ModelAndView("redirect:/show");
         String fileName = upImg.getOriginalFilename();

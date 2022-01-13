@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<form th:action="@{/edit/{id}(id=${products.id_product})}" method="post" enctype="multipart/form-data">
+<form th:action="@{/edit{id}(id=${products.id_product})}" method="post" enctype="multipart/form-data">
     <div class="container">
         <table class="table table-striped">
             <tbody>
